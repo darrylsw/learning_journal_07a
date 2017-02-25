@@ -8,7 +8,7 @@
   <body>
     <header>
       <nav><ul><li><a href="{{ request.route_url('home') }}">Home</a></li>
-           <ul><li><a href="{{ request.route_url('sign/out') }}">Home</a></li></ul>
+           <ul><li><a href="{{ request.route_url('auth', action='out') }}">Sign Out</a></li></ul>
      </nav>
     </header>
     <main>
