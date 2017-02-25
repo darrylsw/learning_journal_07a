@@ -1,6 +1,6 @@
 hupper==0.4.2
 Jinja2==2.9.5
--e git+https://github.com/darrylsw/pythonclass-2017q1.git@2982006883ab8fbf5c2ba3a468b8b214cd1218a5#egg=learning_journal
+-e git+https://github.com/darrylsw/pythonclass-2017q1.git#egg=learning_journal
 Mako==1.0.6
 MarkupSafe==0.23
 PasteDeploy==1.5.2
