@@ -33,7 +33,8 @@ def view(request):
     entry = Entry.by_id(this_id)
     if not entry:
         return HTTPNotFound()
-    return {'entry': entry}
+    logged_in = authenticated_userid(request)
+    return {'entry': entry, 'logged in': logged_in}
 
 @view_config(route_name='action', match_param='action=create', renderer='templates/edit.jinja2', permission='create')
 def create(request):

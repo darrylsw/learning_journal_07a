@@ -1,4 +1,18 @@
 {% extends "layout.jinja2" %}
+
+{% block body %}
+<!-- ... WRAP THE EDIT LINK -->
+<p>
+  <a href="{{ request.route_url('home') }}">Go Back</a>
+  {% if logged_in %}
+  ::
+  <a href="{{ request.route_url('action', action='edit', _query=(('id',entry.id),)) }}">
+    Edit Entry</a>
+  {% endif %}
+</p>
+{% endblock %}
+
+
 {% block body %}
 <article>
   <h1>{{ entry.title }}</h1>
