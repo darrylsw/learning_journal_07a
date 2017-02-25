@@ -2,3 +2,4 @@
 .DS_Store
 learning_journal.egg-info/
 *.sqlite
+requirements_tmp.txt
