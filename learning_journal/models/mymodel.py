@@ -7,6 +7,7 @@ from sqlalchemy import (
     Text,
     Unicode,
     UnicodeText,
+    func
     )
 
 from .meta import Base
@@ -34,7 +35,7 @@ class Entry(Base):
     title = Column(Unicode(255), unique=True, nullable=False)
     body = Column(UnicodeText, default=u'')
     created = Column(DateTime, default=datetime.datetime.utcnow)
-    edited = Column(DateTime, default=datetime.datetime.utcnow)
+    edited = Column(DateTime, onupdate=func.now())
 
     @classmethod
     def all(cls, session=None):
