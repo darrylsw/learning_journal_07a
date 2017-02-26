@@ -8,7 +8,10 @@
   <body>
     <header>
       <nav><ul><li><a href="{{ request.route_url('home') }}">Home</a></li>
-           <li><a href="{{ request.route_url('auth', action='out') }}">Sign Out</a></li></ul>
+           {% if logged_in %}
+           <li><a href="{{ request.route_url('auth', action='out') }}">Sign Out</a></li>
+           {% endif %}
+           </ul>
      </nav>
     </header>
     <main>
