@@ -19,6 +19,7 @@ requires = [
     'waitress',
     'wtforms',
     'passlib',
+    'markdown',
     ]
 
 tests_require = [
@@ -37,9 +38,9 @@ setup(name='learning_journal',
           "Topic :: Internet :: WWW/HTTP",
           "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
       ],
-      author='',
-      author_email='',
-      url='',
+      author='Darryl Wong',
+      author_email='darrylsw@gmail.com',
+      url='https://git.heroku.com/damp-garden-13887.git',
       keywords='web wsgi bfg pylons pyramid',
       packages=find_packages(),
       include_package_data=True,

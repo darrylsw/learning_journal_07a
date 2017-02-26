@@ -16,6 +16,13 @@ from ..models.mymodel import User
 
 from pyramid.security import authenticated_userid
 
+from jinja2 import Markup
+import markdown
+
+def render_markdown(content):
+    output = Markup(markdown.markdown(content))
+    return output
+
 @view_config(route_name='home', renderer='templates/list.jinja2')
 def index_page(request):
     entries = Entry.all()
