@@ -20,6 +20,7 @@ requires = [
     'wtforms',
     'passlib',
     'markdown',
+    'pygments',
     ]
 
 tests_require = [
